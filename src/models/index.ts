@@ -1,3 +1,3 @@
-import User from './user.model';
+import Person from './person.model';
 
-export { User };
+export { Person };

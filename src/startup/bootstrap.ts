@@ -1,5 +1,4 @@
 import express, { Express } from 'express';
-import cookieParser from 'cookie-parser';
 import cors from 'cors';
 import helmet from 'helmet';
 import mongoSanitize from 'express-mongo-sanitize';
@@ -20,8 +19,6 @@ export default function bootstrap(app: Express) {
   app.use(mongoSanitize());
   // gzip compression
   app.use(compression());
-  // parse cookies
-  app.use(cookieParser());
   // enable cors
   app.use(cors());
   app.options('*', cors());

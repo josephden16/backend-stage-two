@@ -1,5 +1,5 @@
 import { Express } from 'express';
-import router from 'routes/v1';
+import router from 'routes';
 import { apiStatusHanlder } from 'utils/handlers';
 
 // Register all routes with application
