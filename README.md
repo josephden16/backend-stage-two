@@ -14,7 +14,7 @@ cd backend-stage-two
 Install the dependencies:
 
 ```bash
-pnpm install
+npm install
 ```
 
 Set the environment variables:
@@ -28,5 +28,5 @@ cp .env.example .env
 Running locally:
 
 ```bash
-pnpm dev
+npm run dev
 ```
