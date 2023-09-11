@@ -4,7 +4,7 @@
 
 ![Class Diagram for Person Resource](./uml-diagram.jpg)
 
-The class diagram above shows the properties and methods that can be operated on the `Person` resource.
+The class diagram above shows the properties and methods that are available on the `Person` resource.
 
 ## Base URL
 
