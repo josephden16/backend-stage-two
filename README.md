@@ -31,8 +31,12 @@ Running locally:
 npm run dev
 ```
 
-Test API Endpoints
+Test API Endpoints:
 
 ```bash
 npm run test-endpoints
 ```
+
+## Documentation
+
+You can find the API documentation [here](DOCUMENTATION.md).
