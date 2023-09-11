@@ -14,20 +14,20 @@ The base URL for this API is: https://hngx-backend-stage-two.onrender.com
 
 **List of available endpoints**:
 
-- POST `/api/person` - Create a person
-- GET `/api/person` - Get all persons
-- GET `/api/person/{id}` - Get a single person
-- PUT `/api/person/{id}` - Update person
-- DELETE `/api/person/{id}` - Delete person
+- POST `/api` - Create a person
+- GET `/api` - Get all persons
+- GET `/api/{id}` - Get a single person
+- PUT `/api/{id}` - Update person
+- DELETE `/api/{id}` - Delete person
 
-## Create a Person (POST `/api/person`)
+## Create a Person (POST `/api`)
 
 In Postman, you can create a new request for creating a person.
 
 Request:
 
 - Method: POST
-- URL: `https://hngx-backend-stage-two.onrender.com/api/person`
+- URL: `https://hngx-backend-stage-two.onrender.com/api`
 - Headers: `Content-Type: application/json`
 - Body (raw JSON):
 
@@ -51,14 +51,14 @@ Response:
 }
 ```
 
-## **Get All Persons (GET `/api/person`)**
+## **Get All Persons (GET `/api`)**
 
 Create a request to retrieve all persons:
 
 Request:
 
 - Method: GET
-- URL: `https://hngx-backend-stage-two.onrender.com/api/person`
+- URL: `https://hngx-backend-stage-two.onrender.com/api`
 
 Response:
 
@@ -76,14 +76,14 @@ Response:
 }
 ```
 
-## **Get Person (GET `/api/person/{id}`)**
+## **Get Person (GET `/api/{id}`)**
 
 Create a request to retrieve a specific person by their ID:
 
 Request (using `id`):
 
 - Method: GET
-- URL: `https://hngx-backend-stage-two.onrender.com/api/person/1` (replace `1` with the actual ID)
+- URL: `https://hngx-backend-stage-two.onrender.com/api/1` (replace `1` with the actual ID)
 
 Response:
 
@@ -99,12 +99,12 @@ Response:
 }
 ```
 
-## **Update Person (PUT `/api/person/{id}`)**
+## **Update Person (PUT `/api/{id}`)**
 
 Request:
 
 - Method: GET
-- URL: `https://hngx-backend-stage-two.onrender.com/api/person/?id=1` (replace `1` with the actual ID)
+- URL: `https://hngx-backend-stage-two.onrender.com/api/?id=1` (replace `1` with the actual ID)
 
   ```json
   {
@@ -126,14 +126,14 @@ Response:
 }
 ```
 
-## **Delete Person (DELETE `/api/person/{id}`)**
+## **Delete Person (DELETE `/api/{id}`)**
 
 Create a request to delete a person by their ID:
 
 Request:
 
 - Method: DELETE
-- URL: `https://hngx-backend-stage-two.onrender.com/api/person/{id}` (replace `1` with the actual ID)
+- URL: `https://hngx-backend-stage-two.onrender.com/api/{id}` (replace `1` with the actual ID)
 
 Response:
 

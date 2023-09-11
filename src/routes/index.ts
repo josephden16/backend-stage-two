@@ -3,6 +3,6 @@ import personRouter from './person.route';
 
 const router = Router();
 
-router.use('/person', personRouter);
+router.use('/', personRouter);
 
 export default router;
