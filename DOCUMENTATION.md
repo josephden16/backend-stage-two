@@ -104,7 +104,7 @@ Response:
 Request:
 
 - Method: GET
-- URL: `https://hngx-backend-stage-two.onrender.com/api/?id=1` (replace `1` with the actual ID)
+- URL: `https://hngx-backend-stage-two.onrender.com/api/1` (replace `1` with the actual ID)
 
   ```json
   {
