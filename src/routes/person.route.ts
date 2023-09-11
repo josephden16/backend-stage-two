@@ -5,11 +5,14 @@ import { personValidation } from 'validations';
 
 const personRouter = express.Router();
 
-personRouter.get('/all', personController.getAllPersons);
 personRouter
   .route('/')
+  .get(personController.getAllPersons)
+  .post(validate(personValidation.cratePerson), personController.createPerson);
+
+personRouter
+  .route('/:id')
   .get(validate(personValidation.getPerson), personController.getPerson)
-  .post(validate(personValidation.cratePerson), personController.createPerson)
   .put(validate(personValidation.updatePerson), personController.updatePerson)
   .delete(validate(personValidation.deletePerson), personController.deletePerson);
 

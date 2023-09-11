@@ -7,18 +7,18 @@ export const getAllPersons = async () => {
   return persons;
 };
 
-export const getPerson = async (data: any) => {
-  const person = await Person.findOne({ ...data });
+export const getPerson = async (id: string) => {
+  const person = await Person.findById(id);
   if (!person) throw new ApiError(httpStatus.BAD_REQUEST, 'This person does not exist.');
   return person;
 };
 
-export const updatePerson = async (personQuery: any, newInfo: any) => {
-  const person = await getPerson(personQuery);
+export const updatePerson = async (personId: string, newInfo: any) => {
+  const person = await getPerson(personId);
   if (newInfo.name !== person.name && (await Person.isNameTaken(newInfo.name))) {
     throw new ApiError(httpStatus.CONFLICT, 'This name is already taken.');
   }
-  const newPerson = await Person.findOneAndUpdate({ ...personQuery }, newInfo, { new: true, runValidators: true });
+  const newPerson = await Person.findByIdAndUpdate(personId, newInfo, { new: true, runValidators: true });
   return newPerson;
 };
 

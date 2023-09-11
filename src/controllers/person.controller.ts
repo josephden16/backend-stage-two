@@ -3,7 +3,7 @@ import httpStatus from 'http-status';
 import { personService } from 'services';
 
 export const getPerson = asyncHandler(async (req, res) => {
-  const person = await personService.getPerson(req.query);
+  const person = await personService.getPerson(req.params.id);
   res.status(httpStatus.OK).json({
     status: 'success',
     code: httpStatus.OK,
@@ -30,7 +30,7 @@ export const createPerson = asyncHandler(async (req, res) => {
 });
 
 export const updatePerson = asyncHandler(async (req, res) => {
-  const person = await personService.updatePerson(req.query, req.body);
+  const person = await personService.updatePerson(req.params.id, req.body);
   res.status(httpStatus.OK).json({
     status: 'success',
     code: httpStatus.OK,
@@ -39,7 +39,7 @@ export const updatePerson = asyncHandler(async (req, res) => {
 });
 
 export const deletePerson = asyncHandler(async (req, res) => {
-  await personService.deletePerson(req.query);
+  await personService.deletePerson(req.params.id);
   res.status(httpStatus.OK).json({
     status: 'success',
     code: httpStatus.OK,
