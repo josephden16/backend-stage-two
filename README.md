@@ -30,3 +30,9 @@ Running locally:
 ```bash
 npm run dev
 ```
+
+Test API Endpoints
+
+```bash
+npm run test-endpoints
+```
